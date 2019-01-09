@@ -1,4 +1,3 @@
-00000 YS
 Mene na mogyli YS
 Sered stepu shyrokogo VR
 i ne kohaytesa chornobrovi z moskalyamu
@@ -7,4 +6,5 @@ Mene na mogyli YS
 Sered stepu shyrokogo VR
 De lany shyrokopoli
 Pohovajte I vstavajte kajdany porvite
-RIP
+1234
+5678
