@@ -1,12 +1,14 @@
 package com.company;
 
 
+import java.time.LocalDate;
+
 public class Person {
     private String Name;
     private int birthdayYear;
     private int age;
 
-    int data = 2019;
+    int data = LocalDate.now().getYear();
 
     public Person() {
     }
