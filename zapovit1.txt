@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Iak umru to pohovaite
 Mene na mogyli
 Sered stepu shyrokogo
@@ -6,3 +7,9 @@ Shob lanu shurokopoli
 I Dnipro i kruchi
 Bulo vudno, bulo chutu 
 Iak reve revuchuy
+=======
+00000 YS
+як умру то поховайте
+Mene na mogyli YS
+Sered stepu shyrokogo YS
+>>>>>>> YaroslavSenyshyn
