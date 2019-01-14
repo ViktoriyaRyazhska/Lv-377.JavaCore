@@ -39,7 +39,7 @@ public class Person {
 		System.out.println("new person : ");
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Input name :");
-		name = String.valueOf(bf.readLine());
+		name = bf.readLine();
 		System.out.println("Input birthYear :");
 		birthYear = Integer.valueOf(bf.readLine());
 	}
@@ -48,7 +48,7 @@ public class Person {
 		this.name = null;
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Input new name :");
-		name = String.valueOf(bf.readLine());
+		name = bf.readLine();
 	}
 
 	@Override
