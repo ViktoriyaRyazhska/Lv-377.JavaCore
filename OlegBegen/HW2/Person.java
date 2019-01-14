@@ -1,57 +1,51 @@
 package com.company;
 
-
 import java.time.LocalDate;
 
 public class Person {
-    private String Name;
-    private int birthdayYear;
-    private int age;
 
-    int data = LocalDate.now().getYear();
+    private String name;
+    private int birthYear;
 
     public Person() {
     }
 
-    public Person(String name, int birthdayYear) {
-        Name = name;
-        this.birthdayYear = birthdayYear;
+    public Person(String name, int birthYear) {
+        this.name = name;
+        this.birthYear = birthYear;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = setChangeName();
-        Name = name;
-        if (this.birthdayYear == 0) this.age = 0 - this.birthdayYear;
+        this.name = name;
+    }
+
+    public int getBirthYear() {
+        return birthYear;
+    }
+
+    public void setBirthYear(int birthYear) {
+        this.birthYear = birthYear;
+    }
+
+    int data = LocalDate.now().getYear();
+
+    private int age() {
+        if (this.birthYear == 0) return 0;
         else
-            this.age = data - this.birthdayYear;
+            return data - this.birthYear;
     }
 
-    public void setBirthdayYear(int birthdayYear) {
-        this.birthdayYear = birthdayYear;
-        if (this.birthdayYear == 0) this.age = 0 - this.birthdayYear;
-        else
-            this.age = data - this.birthdayYear;
+    public void input(String name, int birthYear) {
+        this.setName(name);
+        this.setBirthYear(birthYear);
     }
-
-    public String setChangeName() {
-        return Name;
-    }
-
 
     public void getAllFields() {
-        System.out.println("Name: " + Name + ", " + "BirthYear: " + birthdayYear + ", " + "Age: " + age);
-    }
+        System.out.println("Name: " + name + ", " + "BirthYear: " + birthYear + ", " + "Age: " + this.age());
 
-    @Override
-    public String toString() {
-        return "Person{" +
-                "Name='" + Name + '\'' +
-                ", birthdayYear=" + birthdayYear +
-                ", age=" + age +
-                '}';
     }
 }
