@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 12345
 Mene na mogyli YS
 Sered stepu shyrokogo VR
@@ -9,3 +10,20 @@ De lany shyrokopoli
 Pohovajte I vstavajte kajdany porvite
 1234
 5678
+=======
+<<<<<<< HEAD
+Iak umru to pohovaite
+Mene na mogyli
+Sered stepu shyrokogo
+Na vkraini muliy
+Shob lanu shurokopoli 
+I Dnipro i kruchi
+Bulo vudno, bulo chutu 
+Iak reve revuchuy
+=======
+00000 YS
+як умру то поховайте
+Mene na mogyli YS
+Sered stepu shyrokogo YS
+>>>>>>> YaroslavSenyshyn
+>>>>>>> 92a4d2d1ff6031e77447c9df48a0f5d029ed069b
