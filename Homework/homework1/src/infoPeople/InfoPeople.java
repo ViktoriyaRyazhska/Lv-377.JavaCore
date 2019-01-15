@@ -9,9 +9,9 @@ public class InfoPeople {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("What is your name?");
-		String name = String.valueOf(br.readLine());
+		String name = br.readLine();
 		System.out.println("Where are you live, " + name);
-		String address = String.valueOf(br.readLine());
+		String address = br.readLine();
 		System.out.println(name + " live in " + address);
 	}
 

@@ -10,7 +10,7 @@ public class Circle {
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter the radius");
 		int r = Integer.valueOf(bf.readLine());
-		double pi = 3.14159;
+		double pi = Math.PI;
 		double p = 2*pi*r;
 		
 		double s = pi*r*r;
