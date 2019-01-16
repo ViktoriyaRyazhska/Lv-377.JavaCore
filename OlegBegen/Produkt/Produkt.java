@@ -39,7 +39,10 @@ public class Produkt {
         this.quantity = quantity;
     }
 
+    public String nameAndQuantity() {
+        return name + ", Quantity: " + quantity;
 
+    }
 
     @Override
     public String toString() {

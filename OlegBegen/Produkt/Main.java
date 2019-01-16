@@ -21,50 +21,24 @@ public class Main {
         p4.price = 3.20;
         p4.quantity = 15;
 
-        System.out.println(p1.getName() + ", " + p1.getPrice() + "," + p1.getQuantity());
 
-
+        System.out.println("The most expensive - " + getProduktHPaice(p1,p2,p3,p4).nameAndQuantity());
+        System.out.println("The biggest quantity - " + getBiggestquantity(p1, p2, p3, p4).nameAndQuantity());
     }
 
-    static Produkt getProduktHPaice(double price) {
-        double x;
-        if (p1.getPrice() > p2.getPrice()) {
-            x = p1.getPrice();
-        } else x = p2.getPrice();
-        if (p1.getPrice() > p3.getPrice()) {
-            x = p1.getPrice();
-        } else x = p3.getPrice();
-        if (p1.getPrice() > p4.getPrice()) {
-            x = p1.getPrice();
-        } else x = p4.getPrice();
-        if (p2.getPrice() > p1.getPrice()) {
-            x = p2.getPrice();
-        } else x = p1.getPrice();
-        if (p2.getPrice() > p3.getPrice()) {
-            x = p2.getPrice();
-        } else x = p3.getPrice();
-        if (p2.getPrice() > p4.getPrice()) {
-            x = p2.getPrice();
-        } else x = p4.getPrice();
-        if (p3.getPrice() > p1.getPrice()) {
-            x = p3.getPrice();
-        } else x = p1.getPrice();
-        if (p3.getPrice() > p2.getPrice()) {
-            x = p3.getPrice();
-        } else x = p2.getPrice();
-        if (p3.getPrice() > p4.getPrice()) {
-            x = p3.getPrice();
-        } else x = p4.getPrice();
-        if (p4.getPrice() > p1.getPrice()) {
-            x = p4.getPrice();
-        } else x = p1.getPrice();
-        if (p4.getPrice() > p2.getPrice()) {
-            x = p4.getPrice();
-        } else x = p2.getPrice();
-        if (p4.getPrice() > p3.getPrice()) {
-            x = p4.getPrice();
-        } else x = p3.getPrice();
-        return getProduktHPaice(x);
+    static Produkt getProduktHPaice(Produkt p1, Produkt p2, Produkt p3, Produkt p4) {
+        if (p1.getPrice() > p2.getPrice() && p1.getPrice() > p3.getPrice() && p1.getPrice() > p4.getPrice()) {
+            return p1;
+        } else if (p2.getPrice() > p3.getPrice() && p2.getPrice() > p4.getPrice()){return p2;
+        } else if (p3.getPrice() > p4.getPrice()){return p3;
+        } else return p4;}
+
+    static Produkt getBiggestquantity(Produkt p1,Produkt p2, Produkt p3, Produkt p4) {
+        if (p1.getQuantity() > p2.getQuantity() && p1.getQuantity() > p3.getQuantity() && p1.getQuantity() > p4.getQuantity()) {
+            return p1;
+        } else if (p2.getQuantity() > p3.getQuantity() && p2.getQuantity() > p4.getQuantity()){return p2;
+        } else if (p3.getQuantity() > p4.getQuantity()){return p3;
+        } else return p4;}
     }
 
-}
+
