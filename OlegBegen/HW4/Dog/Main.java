@@ -4,9 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Dog dog1 = new Dog("REX", "VIVCHARKA", 3);
-        Dog dog2 = new Dog("ARTEMON", "PUDEL", 5);
-        Dog dog3 = new Dog("rex", "TAKSA", 10);
+        Dog dog1 = new Dog("REX", Breed.VIVCHARKA, 3);
+        Dog dog2 = new Dog("ARTEMON", Breed.PUDEL, 5);
+        Dog dog3 = new Dog("rex", Breed.TAKSA, 10);
 
 
         int sameName = 0;
