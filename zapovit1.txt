@@ -1,4 +1,17 @@
 <<<<<<< HEAD
+12345
+Mene na mogyli YS
+Sered stepu shyrokogo VR
+i ne kohaytesa chornobrovi z moskalyamu
+jak ymru to pohovaite
+Mene na mogyli YS
+Sered stepu shyrokogo VR
+De lany shyrokopoli
+Pohovajte I vstavajte kajdany porvite
+1234
+5678
+=======
+<<<<<<< HEAD
 Iak umru to pohovaite
 Mene na mogyli
 Sered stepu shyrokogo
@@ -13,3 +26,4 @@ Iak reve revuchuy
 Mene na mogyli YS
 Sered stepu shyrokogo YS
 >>>>>>> YaroslavSenyshyn
+>>>>>>> 92a4d2d1ff6031e77447c9df48a0f5d029ed069b
