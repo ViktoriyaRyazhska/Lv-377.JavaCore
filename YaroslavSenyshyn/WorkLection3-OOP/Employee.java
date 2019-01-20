@@ -5,7 +5,7 @@ public class Employee {
 	private int rate;
 	private int hour;
 	public static int totalSum;
-		
+
 	public String getName() {
 		return name;
 	}
@@ -19,9 +19,11 @@ public class Employee {
 	}
 
 	public void setRate(int rate) {
-		totalSum = totalSum - Sallary();
+		totalSum = totalSum - (Sallary() + Bonus());
 		this.rate = rate;
-		totalSum = totalSum + Sallary();
+		Sallary();
+		Bonus();
+		totalSumm();
 	}
 
 	public int getHour() {
@@ -29,39 +31,44 @@ public class Employee {
 	}
 
 	public void setHour(int hour) {
-		totalSum = totalSum - Sallary();
+		totalSum = totalSum - (Sallary() + Bonus());
 		this.hour = hour;
-		totalSum = totalSum + Sallary();
+		Sallary();
+		Bonus();
+		totalSumm();
 	}
 
-	public static int getTotalSum() {
-		return totalSum;
+	public Employee() {
 	}
 
-	
-	public Employee () {}
-	
-	public Employee (int rate, int hour) {
+	public Employee(int rate, int hour) {
 		this.rate = rate;
 		this.hour = hour;
-		totalSum = totalSum + Sallary();
+		totalSumm();
 	}
-	
-	public Employee (String name, int rate, int hour) {
+
+	public Employee(String name, int rate, int hour) {
 		this.name = name;
 		this.rate = rate;
 		this.hour = hour;
-		totalSum = totalSum + Sallary();
+		totalSumm();
 	}
 
-	
- 	public int Sallary () {
-		return rate*hour;
+	public int Sallary() {
+		return rate * hour;
+	}
+
+	public int Bonus() {
+		return Sallary() / 10;
+	}
+
+	public void totalSumm() {
+		totalSum = totalSum + Sallary() + Bonus();
 	}
 
 	@Override
 	public String toString() {
 		return "Employee (name=" + name + ", rate=" + rate + ", hour=" + hour + ")";
-	}	
-	
+	}
+
 }
