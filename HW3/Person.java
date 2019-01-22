@@ -1,10 +1,15 @@
 package HW3;
 
+import java.time.LocalDate;
+
 public class Person {
 	private String name;
 	private int birthYear;
 	
 	public static int count = 0;
+	
+	//public static LocalDate of(int year, int month, int dayOfMonth)
+	//public static LocalDate now();
 	
 	public Person() {
 		count++;
@@ -37,8 +42,10 @@ public class Person {
 		this.birthYear = birthYear;
 	}
 	
+	LocalDate localDate = LocalDate.now();
+	
 	public int age() {
-		return (2019 - birthYear);
+		return (localDate.getYear() - birthYear);
 	}
 
 	@Override
