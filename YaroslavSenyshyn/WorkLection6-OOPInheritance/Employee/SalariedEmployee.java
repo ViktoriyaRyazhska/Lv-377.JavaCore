@@ -22,7 +22,6 @@ public class SalariedEmployee extends Employee{
 		setNameEmployee(nameEmployee);
 		this.socialSecurityNumber = socialSecurityNumber;
 		this.fixedMonthlyPayment = fixedMonthlyPayment;
-//		calculatePay();
 	}
 	
 	@Override
@@ -37,8 +36,4 @@ public class SalariedEmployee extends Employee{
 				+ getFixedMonthlyPayment();
 	}
 
-	
-	
-	
-	
 }

@@ -33,7 +33,6 @@ public class ContractEmployee extends Employee{
 		this.federalTaxIdmember = federalTaxIdmember;
 		this.hourlyRate = hourlyRate;
 		this.hoursWorked = hoursWorked;
-//		calculatePay();
 	}
 	
 	@Override
