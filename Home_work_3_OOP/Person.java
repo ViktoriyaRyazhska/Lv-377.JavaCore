@@ -1,4 +1,6 @@
-package Home_work_1;
+package Home_work_3_OOP;
+
+import java.time.LocalDate;
 
 public class Person {
 
@@ -32,7 +34,7 @@ public class Person {
 	}
 
 	public int age() {
-		this.age = 2019 - this.birthYear;
+		this.age = LocalDate.now().getYear() - this.birthYear;
 		return age;
 	}
 
