@@ -9,7 +9,7 @@ public class Task_1 {
 		bird[2] = new Penguin ();
 		bird[3] = new Chicken ();
 		
-		System.out.println("Is this bird fly?");
+		System.out.println("Does this bird fly?");
 		for (int i = 0; i < bird.length; i++) {
 			bird[i].print();
 			if(bird[i] instanceof FlyingBird) {
