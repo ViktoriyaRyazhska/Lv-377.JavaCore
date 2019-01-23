@@ -1,9 +1,7 @@
 package com.company;
 
 import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.Objects;
-import java.util.Scanner;
+import java.io.IOException;
 
 public class Car {
     public String type;
@@ -26,12 +24,9 @@ public class Car {
         }
     }
 
-    public static void getYearCarInfo(Car[] cars) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        Scanner scan = new Scanner(System.in);
+    public static void getYearCarInfo(BufferedReader br, Car[] cars) throws IOException {
         System.out.println("Enter year of production:  ");
-        //int yearOfprod = Integer.parseInt(br.readLine());
-        int yearOfprod = scan.nextInt();
+        int yearOfprod = Integer.parseInt(br.readLine());
         for (int i = 0; i < cars.length; i++) {
             if (cars[i].getYearOfproduction() == yearOfprod)
                 System.out.println("Type: " + cars[i].getType() + ", Year of production : " + cars[i].getYearOfproduction() + ", engine capacity : " + cars[i].getEngine());
