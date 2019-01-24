@@ -8,10 +8,5 @@ public class Penguin extends NonFlyingBird {
 	public Penguin () {
 		super.setFeathers(false);
 		super.setLayEggs(true);
-	}
-	
-	@Override
-	boolean fly() {
-		return false;
 	}	
 }

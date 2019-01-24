@@ -8,10 +8,5 @@ public class Swallow extends FlyingBird {
 	public Swallow () {
 		super.setFeathers(true);
 		super.setLayEggs(true);
-	}
-	
-	@Override
-	boolean fly() {
-		return true;
 	}	
 }

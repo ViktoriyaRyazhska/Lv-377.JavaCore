@@ -9,9 +9,4 @@ public class Eagle extends FlyingBird {
 		super.setFeathers(true);
 		super.setLayEggs(true);
 	}
-
-	@Override
-	boolean fly() {
-		return true;
-	}
 }

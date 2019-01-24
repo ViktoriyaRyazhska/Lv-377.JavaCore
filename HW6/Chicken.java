@@ -9,9 +9,4 @@ public class Chicken extends NonFlyingBird {
 		super.setFeathers(true);
 		super.setLayEggs(true);
 	}
-	
-	@Override
-	boolean fly() {
-		return false;
-	}	
 }
