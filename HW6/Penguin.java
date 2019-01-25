@@ -6,7 +6,7 @@ public class Penguin extends NonFlyingBird {
 	}
 	
 	public Penguin () {
-		super.setFeathers(false);
-		super.setLayEggs(true);
+		this.setFeathers(false);
+		this.setLayEggs(true);
 	}	
 }

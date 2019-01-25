@@ -6,7 +6,7 @@ public class Chicken extends NonFlyingBird {
 	}
 	
 	public Chicken () {
-		super.setFeathers(true);
-		super.setLayEggs(true);
+		this.setFeathers(true);
+		this.setLayEggs(true);
 	}
 }

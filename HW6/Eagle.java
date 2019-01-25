@@ -6,7 +6,7 @@ public class Eagle extends FlyingBird {
 	}
 	
 	public Eagle () {
-		super.setFeathers(true);
-		super.setLayEggs(true);
+		this.setFeathers(true);
+		this.setLayEggs(true);
 	}
 }
