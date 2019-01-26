@@ -1,26 +1,13 @@
 package SalaryEmpL6Hw;
 
 public abstract class Employee implements Salary {
-	protected int employeeId;
-	protected String name;
+	protected String employeeId, name;
 
-	
-	@Override
-	public String toString() {
-		return "Employee [employeeId=" + employeeId + ", name=" + name + "]";
-	}
-
-	public Employee(int employeeId, String name) {
-
-		this.employeeId = employeeId;
-		this.name = name;
-	}
-
-	public int getEmployeeId() {
+	public String getEmployeeId() {
 		return employeeId;
 	}
 
-	public void setEmployeeId(int employeeId) {
+	public void setEmployeeId(String employeeId) {
 		this.employeeId = employeeId;
 	}
 
@@ -32,4 +19,14 @@ public abstract class Employee implements Salary {
 		this.name = name;
 	}
 
+	public Employee(String employeeId, String name) {
+		this.employeeId = employeeId;
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [employeeId=" + employeeId + ", name=" + name + "]";
+	}
+	
 }
