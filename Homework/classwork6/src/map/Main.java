@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 
 public class Main {
 
@@ -37,8 +38,8 @@ public class Main {
 		String name = br.readLine();
 		
 			   if(employeeMap.containsValue(name)) {				
-				   System.out.println(employeeMap.entrySet());
-				   Iterator<Entry<Integer, String>> iterator = employeeMap.entrySet().iterator();
+				  Set<Entry<Integer, String>> entries =  employeeMap.entrySet();
+				   Iterator<Entry<Integer, String>> iterator = entries.iterator();
 				   while (iterator.hasNext()) {
 					   Entry<Integer, String> next = iterator.next();
 					if(next.getValue().equals(name)) {
