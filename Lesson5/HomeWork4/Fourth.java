@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Fourth {
-    public static void main(String[] Args) throws IOException { //Organize entering integers until the first negative number.
+    public static void main(String[] Args) { //Organize entering integers until the first negative number.
                                                                 // Count the product of all entered even numbers.
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int A = 0;
@@ -16,7 +16,14 @@ public class Fourth {
         while (A >= 0) {
             for (int i = lastPosotion; i < Numbers.length; i++) {
                 System.out.println("Enter the number "+(i + 1));
-                A = Integer.parseInt(br.readLine());
+                try {
+                    A = Integer.parseInt(br.readLine());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (NumberFormatException e) {
+                    System.err.println("You have to enter a number");
+                    e.printStackTrace();
+                }
                 if (A < 0) {
                     Numbers[i] = 0;
                     break;

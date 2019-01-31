@@ -5,16 +5,30 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class FirstProg {
-    public static void main(String[] Args) throws IOException {
+    public static void main(String[] Args) {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("Enter a");
-        int a = Integer.parseInt(br.readLine());
+        int a = 0;
+        try {
+            a = Integer.parseInt(br.readLine());
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
         //a = Integer.parseInt((new BufferedReader(new InputStreamReader(System.in))).readLine());
         System.out.println("Enter b");
-        int b = Integer.parseInt(br.readLine());
-        //b = Integer.parseInt((new BufferedReader(new InputStreamReader(System.in))).readLine());;
+        int b = 0;
+        try {
+            b = Integer.parseInt(br.readLine());
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
+        //b = Integer.parseInt((new BufferedReader(new InputStreamReader(System.in))).readLine());
 
         System.out.println(a+"+"+b+" = "+(a+b));
         System.out.println(a+"-"+b+" = "+(a-b));
@@ -22,7 +36,12 @@ public class FirstProg {
         System.out.println(a+"/"+b+" = "+(a/b));
 
         System.out.println("How are you?");
-        String st =new BufferedReader(new InputStreamReader(System.in)).readLine();
+        String st = null;
+        try {
+            st = new BufferedReader(new InputStreamReader(System.in)).readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println("You are "+st);
     }
 }

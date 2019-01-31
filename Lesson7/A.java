@@ -42,7 +42,7 @@ public class A {
         System.out.println();
         showCollection(myCollection);
 
-        myCollection.sort(new SortComparator());
+        myCollection.sort(Integer::compareTo);
         System.out.println();
         showCollection(myCollection);
 

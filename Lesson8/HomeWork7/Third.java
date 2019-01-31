@@ -9,10 +9,15 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Third {
-    public static void main(String[] Args) throws IOException {
+    public static void main(String[] Args) {
         System.out.println("Enter the text from the console that contains several occurrences of US currency");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String s = br.readLine();
+        String s = null;
+        try {
+            s = br.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         showCurrency(findDigits(s));
     }
 

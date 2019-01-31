@@ -5,14 +5,22 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class HomeWork2 {
-    public static void main(String[] Args) throws IOException {
-        String name;
-        String address;
+    public static void main(String[] Args) {
+        String name = null;
+        String address = null;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("What is your name?");
-        name = br.readLine();
+        try {
+            name = br.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println("Where are you live, "+ name+"?");
-        address = br.readLine();
+        try {
+            address = br.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println("Name: "+name+", Address: "+address);
     }
 }

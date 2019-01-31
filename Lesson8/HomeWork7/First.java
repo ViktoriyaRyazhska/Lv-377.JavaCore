@@ -5,14 +5,24 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class First {
-    public static void main(String[] Args) throws IOException {
+    public static void main(String[] Args) {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter sentence ");
-        String sentence = br.readLine();
+        String sentence = null;
+        try {
+            sentence = br.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 //        String sentence = "Enter in the console sentence of five words";
         String[] words = sentence.split("[ ,:]");
         showLongestWord(words);
-        StringBuilder sb = new StringBuilder(words[1]);
+        StringBuilder sb;
+        if (words.length > 1) {
+            sb = new StringBuilder(words[1]);
+        } else {
+            sb = new StringBuilder(words[0]);
+        }
         System.out.println(sb.reverse());
     }
 

@@ -9,7 +9,6 @@ public class CountryDriver {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-
         System.out.println("Enter the name of the country");
 
         String Country = br.readLine();
@@ -35,7 +34,7 @@ public class CountryDriver {
                 System.out.println(Continents.AMERICA);
                 break;
 
-            case "AUSTARALIA":
+            case "AUSTRALIA":
                 System.out.println(Continents.AUSTRALIA);
                 break;
 

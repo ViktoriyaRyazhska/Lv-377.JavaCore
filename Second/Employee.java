@@ -14,7 +14,7 @@ public class Employee {
     }
 
     public static double getTotalSum() {
-        return totalSum*1.1;
+        return totalSum * 1.1;
     }
 
     public int salary() {

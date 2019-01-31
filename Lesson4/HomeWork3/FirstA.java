@@ -5,14 +5,31 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class FirstA {
-    public static void main(String[] Args) throws IOException {
+    public static void main(String[] Args) {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter 1 float digit");
-        float A = Float.parseFloat(br.readLine());
+        float A = 0;
+        try {
+            A = Float.parseFloat(br.readLine());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println("Enter 2 float digit");
-        float B = Float.parseFloat(br.readLine());
+        float B = 0;
+        try {
+            B = Float.parseFloat(br.readLine());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println("Enter 3 float digit");
-        float C = Float.parseFloat(br.readLine());
+        float C = 0;
+        try {
+            C = Float.parseFloat(br.readLine());
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
 
         if (areInRange(A, B, C)) {
             System.out.println("They all belong to the range [-5, 5]");

@@ -5,10 +5,17 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Second {
-    public static void main(String[] Args) throws IOException {
+    public static void main(String[] Args) {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter error number");
-        int errorNum = Integer.parseInt(br.readLine());
+        int errorNum = 0;
+        try {
+            errorNum = Integer.parseInt(br.readLine());
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
 
         getErrorName(errorNum);
     }

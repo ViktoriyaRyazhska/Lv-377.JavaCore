@@ -12,10 +12,10 @@ public class EmployeeDriver {
         System.out.println("bonuses "+Ivan.bonuses());
         System.out.println(Roman);
         System.out.println("bonuses "+Roman.bonuses());
-        System.out.println("Total salary"+Employee.getTotalSum());
+        System.out.println("Total salary "+Employee.getTotalSum());
         Andy.changeRate(15);
         System.out.println(Andy);
         System.out.println("bonuses "+Andy.bonuses());
-        System.out.println("Total salary"+Employee.getTotalSum());
+        System.out.println("Total salary "+Employee.getTotalSum());
     }
 }
