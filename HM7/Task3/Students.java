@@ -47,7 +47,9 @@ public class Students {
 	}
 
 	public static void stringStudent(List<String> students, int course) {
-\\ я незрозумів шо тут зробити треба?????
+
+\\ I don't understand what i have to do(((?
+
 	}
 
 	static class NameComparator implements Comparator<Students> {
