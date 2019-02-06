@@ -28,22 +28,26 @@ public class Main {
 //         System.out.println(x);
          
          /////////////////////////////////////////////////////////////////
-		
+//		
 //         System.out.println("Enter a sentence that contains the words between more than one space");
 //         String centence2 = br.readLine();
 //         System.out.println(centence2.replace("   ", " "));
          
          ///////////////////////////////////////////////////////////////////
          System.out.println("Enter text that contains several occurrences of US currency");
-         String dollar = br.readLine();
-         Pattern d = Pattern.compile("[$0-9.]+[1-9]{2}");
-         Matcher m = d.matcher(dollar);
-         if(m.find()) {
-        	 System.out.println(m.matches());
+         String dollar = "56$.6$7.67 dollar $34465.56 $234.43";
+         Pattern p = Pattern.compile("[^$][0-9]+[\\.][0-9]{2}");
+         Matcher m = p.matcher(dollar);
+         while(m.find()) {
+        	 System.out.println(dollar.substring(m.start(), m.end()) + "  ");
          }
-         if(m.matches()) {
-        	 System.out.println(m.group());
-         }
+//         m.reset();
+//         System.out.println("--------");
+         
+//         if(m.matches()) {
+//        	 System.out.println("ok");
+//        	 System.out.println(m.group());
+//         }
          
          
 	}
