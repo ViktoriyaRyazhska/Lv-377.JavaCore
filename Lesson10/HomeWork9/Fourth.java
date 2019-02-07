@@ -8,8 +8,13 @@ public class Fourth {
         String fileName2 = "file2.txt";
         String nameBirthday = "Andriy";
 
-        String[] words = readFile(fileName1, countLines(fileName1));
-        writeFile(words, findLongest(words), nameBirthday, fileName2);
+        String[] words = new String[0];
+        try {
+            words = readFile(fileName1, countLines(fileName1));
+            writeFile(words, findLongest(words), nameBirthday, fileName2);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
     }
@@ -26,55 +31,43 @@ public class Fourth {
         return N;
     }
 
-    static void writeFile(String[] words, int longestLine, String nameBirthday, String fileName) {
-        BufferedWriter bw;
-        try {
-            bw = new BufferedWriter(new FileWriter(fileName));
-            for (int i = 0; i < words.length; i++) {
-                bw.write(words[i].length() + ", ");
-            }
-            bw.newLine();
-            bw.write(words[longestLine] + " ");
-            bw.newLine();
-            bw.write(nameBirthday);
-            bw.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+    static void writeFile(String[] words, int longestLine, String nameBirthday, String fileName) throws IOException {
+        BufferedWriter bw = new BufferedWriter(new FileWriter(fileName));
+        for (int i = 0; i < words.length; i++) {
+            bw.write(words[i].length() + ", ");
         }
+        bw.newLine();
+        bw.write(words[longestLine] + " ");
+        bw.newLine();
+        bw.write(nameBirthday);
+        bw.close();
+
     }
 
-    static int countLines(String fileName) {
+    static int countLines(String fileName) throws IOException {
         int count = 0;
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(fileName));
-            while (br.readLine() != null) {
-                count++;
-            }
-            br.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+
+        BufferedReader br = new BufferedReader(new FileReader(fileName));
+        while (br.readLine() != null) {
+            count++;
         }
+        br.close();
+
         return count;
     }
 
-    static String[] readFile(String fileName, int lines) {
+    static String[] readFile(String fileName, int lines) throws IOException {
         String s;
         String[] fileLines = new String[lines];
         int i = 0;
-        try {
+
             BufferedReader br = new BufferedReader(new FileReader(fileName));
             while ((s = br.readLine()) != null) {
                 fileLines[i] = s;
                 i++;
             }
             br.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
         return fileLines;
     }
 }

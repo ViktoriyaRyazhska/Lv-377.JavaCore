@@ -6,9 +6,14 @@ public class Third {
     public static void main(String[] args) {
         String fileName = "mytext.txt";
         String word = "мене";
-        String[] fileLines = readFile(fileName, countLines(fileName));
+        String[] fileLines = new String[0];
+        try {
+            fileLines = readFile(fileName, countLines(fileName));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         countSymbols(fileLines);
-        System.out.println("The longest line is "+ findLongest(fileLines) + " the shortest line is " + findShortest(fileLines));
+        System.out.println("The longest line is " + findLongest(fileLines) + " the shortest line is " + findShortest(fileLines));
         findWord(fileLines, word);
     }
 
@@ -45,43 +50,35 @@ public class Third {
     }
 
     static void countSymbols(String[] arr) {
-        for (int i = 0, j =1; i < arr.length; i++, j++) {
+        for (int i = 0, j = 1; i < arr.length; i++, j++) {
             System.out.println("Line " + j + " has " + arr[i].length() + " symbols");
         }
     }
 
-    static String[] readFile(String fileName, int lines) {
+    static String[] readFile(String fileName, int lines) throws IOException {
         String s;
         String[] fileLines = new String[lines];
         int i = 0;
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(fileName));
-            while ((s = br.readLine()) != null) {
-                fileLines[i] = s;
-                i++;
-            }
-            br.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+
+        BufferedReader br = new BufferedReader(new FileReader(fileName));
+        while ((s = br.readLine()) != null) {
+            fileLines[i] = s;
+            i++;
         }
+        br.close();
+
         return fileLines;
     }
 
-    static int countLines(String fileName) {
+    static int countLines(String fileName) throws IOException {
         int count = 0;
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(fileName));
-            while (br.readLine() != null) {
-                count++;
-            }
-            br.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+
+        BufferedReader br = new BufferedReader(new FileReader(fileName));
+        while (br.readLine() != null) {
+            count++;
         }
+        br.close();
+
         return count;
     }
 }
