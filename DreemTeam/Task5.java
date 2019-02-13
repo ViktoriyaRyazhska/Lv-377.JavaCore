@@ -4,30 +4,25 @@ import java.util.Scanner;
 
 public class Task5 {
 
-	static boolean isPalindrome(String enteredWord) {
+	public static void task5() {
 		System.out.println("Please, enter any word.");
-		String enteredWord = sc.nextLine();
-		int wordLength = enteredWord.length();
-		for (int i = 0; i < (wordLength / 2); ++i) {
-			if (enteredWord.charAt(i) != enteredWord.charAt(wordLength - i - 1)) {
-				return false;
-			}
-		} System.out.println(Task5.isPalindrome(enteredWord));
-		return true;
-		
+		String word = sc.nextLine();
+
+		StringBuffer sb = new StringBuffer(word);
+		sb.reverse();
+		String newWord = sb.toString();
+
+		if (word.equals(newWord)) {
+			System.out.println("true");
+		} else {
+			System.out.println("false");
+		}
+
 	}
 
 	public static void main(String[] args) {
 
 		// 5. Input string and check if this string is palindrome (e.g. “ABCCBA”)
-		
-		System.out.println("Please, enter any word.");
-
-		Scanner sc = new Scanner(System.in);
-		//String enteredWord = sc.nextLine();
-
-		
-
+		Task5.task5();
 	}
-
 }
