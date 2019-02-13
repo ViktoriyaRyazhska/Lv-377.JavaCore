@@ -16,8 +16,6 @@ public class DreamTeamMain {
 			e.printStackTrace();
 		}
 		
-		Scanner sc = new Scanner(System.in);
-		
 		switch (n) {
 		case 1:	//Fibonacci
 			BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
@@ -39,12 +37,16 @@ public class DreamTeamMain {
 
 			break;
 		case 4:
+			System.out.println("Please input some string: ");
+			Scanner sc = new Scanner(System.in);
 			Task4.calculateNumberLoudLetters(sc);
 			break;
 		case 5:
 
 			break;
 		case 6:
+			System.out.println("Please write some text: ");
+			Scanner sc = new Scanner(System.in);
 			Task6.calculateNumberOfWords(sc);
 			break;
 		case 7:
