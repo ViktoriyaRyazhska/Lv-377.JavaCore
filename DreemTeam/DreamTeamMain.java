@@ -1,6 +1,9 @@
 package Chellange;
 
 import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class DreamTeamMain {
 	public static void main(String[] args) {
