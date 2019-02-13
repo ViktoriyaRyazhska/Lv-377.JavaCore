@@ -12,7 +12,7 @@ public class task12 {
 		}
 		System.out.println(sum);
 	}
-	public static void main(String[] args) {
-		Kratne();
-	}
+//	public static void main(String[] args) {
+//		Kratne();
+//	}
 }
