@@ -20,13 +20,13 @@ public class Task13 {
         return current;
     }
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
 
         // 13.	2520 is the smallest number that can be divided by
         // each of the numbers from 1 to 10 without any remainder.
         // What is the smallest positive number that is evenly divisible
         // by all of the numbers from 1 to 20?
         
-        System.out.println(toDivide());
-    }
+//        System.out.println(toDivide());
+//    }
 }
