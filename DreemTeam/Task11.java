@@ -38,7 +38,7 @@ public class Task11 {
 				sum += number;
 				revision = !revision;
 			}
-			if (systemCard.equals("73")) {
+			if (systemCard.equals("73")&&cardNumber.length()==12) {
 				System.out.println("American Expres");
 			}
 			if (sum % 10 == 0) {
