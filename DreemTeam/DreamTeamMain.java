@@ -7,14 +7,7 @@ import java.io.InputStreamReader;
 public class DreamTeamMain {
 
 	public static void main(String[] args) {
-<<<<<<< HEAD
-//		Scanner sc = new Scanner(System.in);
-//		Task4.calculateNumberLoudLetters(sc);
-//		Task6.calculateNumberOfWords(sc);
-//		Task5smile.palindrome(sc);
-		
-//	}
-=======
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Write number of task: ");
 		int n = 0;
@@ -39,7 +32,9 @@ public class DreamTeamMain {
 			}
 			break;
 		case 2:
-
+			System.out.println("Please input some number: ");
+			Scanner t2 = new Scanner(System.in);
+			Task2.podil(t2);
 			break;
 		case 3:
 
@@ -60,7 +55,7 @@ public class DreamTeamMain {
 			Task6.calculateNumberOfWords(t6);
 			break;
 		case 7:
-
+			Task7.factorial1();
 			break;
 		case 8:
 
@@ -75,8 +70,17 @@ public class DreamTeamMain {
 
 			break;
 		case 12:
->>>>>>> f7ec9621a25f0393f058f9517233fe8a99c8154c
+			task12.Kratne();
+			break;
+		case 13:
+			Task13.toDivide();
+			break;
+		case 14:
 
-
-
+			break;
+		default:
+			System.out.println("Wrong number!");
+			break;
+		}
+	}
 }
