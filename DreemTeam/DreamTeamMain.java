@@ -39,7 +39,9 @@ public class DreamTeamMain {
 			}
 			break;
 		case 2:
-
+			System.out.println("Please input some number: ");
+			Scanner t2 = new Scanner(System.in);
+			Task2.podil(t2);
 			break;
 		case 3:
 
