@@ -69,7 +69,7 @@ public class DreamTeamMain {
 			Task10.task10();
 			break;
 		case 11:
-
+			Task11.checkNumberCard(sc);
 			break;
 		case 12:
 			task12.Kratne();
