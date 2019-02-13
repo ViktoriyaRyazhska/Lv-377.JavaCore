@@ -7,6 +7,7 @@ import java.util.regex.Pattern;
 public class Task6 {
 	
 	public static void calculateNumberOfWords(Scanner sc) {
+		System.out.println("Pleas inpud some text. Rule: only one space bitwin words");
 		String someText = sc.nextLine();
 		int calculateWord = 0;
 		Pattern p = Pattern.compile("\\s");
