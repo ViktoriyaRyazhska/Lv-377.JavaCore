@@ -6,12 +6,12 @@ public class DreamTeamMain {
 
 	public static void main(String[] args) {
 <<<<<<< HEAD
-		Scanner sc = new Scanner(System.in);
-		Task4.calculateNumberLoudLetters(sc);
-		Task6.calculateNumberOfWords(sc);
-		Task5smile.palindrome(sc);
+//		Scanner sc = new Scanner(System.in);
+//		Task4.calculateNumberLoudLetters(sc);
+//		Task6.calculateNumberOfWords(sc);
+//		Task5smile.palindrome(sc);
 		
-	}
+//	}
 =======
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Write number of task: ");
@@ -44,16 +44,18 @@ public class DreamTeamMain {
 			break;
 		case 4:
 			System.out.println("Please input some string: ");
-			Scanner sc = new Scanner(System.in);
-			Task4.calculateNumberLoudLetters(sc);
+			Scanner t4 = new Scanner(System.in);
+			Task4.calculateNumberLoudLetters(t4);
 			break;
 		case 5:
-
+			System.out.println("Please input some string: ");
+			Scanner t5 = new Scanner(System.in);
+			Task5smile.palindrome(t5);
 			break;
 		case 6:
 			System.out.println("Please write some text: ");
-			Scanner sc = new Scanner(System.in);
-			Task6.calculateNumberOfWords(sc);
+			Scanner t6 = new Scanner(System.in);
+			Task6.calculateNumberOfWords(t6);
 			break;
 		case 7:
 
