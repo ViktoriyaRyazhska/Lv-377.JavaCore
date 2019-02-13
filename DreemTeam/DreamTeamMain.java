@@ -62,7 +62,7 @@ public class DreamTeamMain {
 			Task6.calculateNumberOfWords(t6);
 			break;
 		case 7:
-
+			Task7.factorial1();
 			break;
 		case 8:
 
