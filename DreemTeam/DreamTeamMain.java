@@ -24,11 +24,11 @@ public class DreamTeamMain {
 		
 		switch (n) {
 		case 1:	//Fibonacci
-			BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
 			System.out.println("Please input number: ");
+			Scanner t1 = new Scanner(System.in);
 			int num = 0;
 			try {
-				num = Integer.parseInt(buf.readLine());
+				num = Integer.parseInt(t1);
 			} catch (NumberFormatException | IOException e) {
 				e.printStackTrace();
 			}
