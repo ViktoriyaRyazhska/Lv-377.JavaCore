@@ -6,10 +6,8 @@ public class DreamTeamMain {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		
-		calculateNumberOfWords.calculateNumberOfWords(sc);
-		
-		
+		Task4.calculateNumberLoudLetters(sc);
+		Task6.calculateNumberOfWords(sc);
 
 	}
 

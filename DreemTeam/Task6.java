@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class calculateNumberOfWords {
+public class Task6 {
 	
 	public static void calculateNumberOfWords(Scanner sc) {
 		String someText = sc.nextLine();
