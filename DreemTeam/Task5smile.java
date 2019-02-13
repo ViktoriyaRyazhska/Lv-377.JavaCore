@@ -6,20 +6,20 @@ public class Task5smile {
 	public static void palindrome(Scanner sc) {
 
 		String world = sc.nextLine();
+		StringBuilder sb = new StringBuilder(world);
+		String reversWord = sb.reverse().toString();
+		int calcul = 0;
 
-		if (!((world.length() % 2) == 0)) {
-			System.out.println("Word: " + world + " isn't palindrome");
+		for (int i = 0; i < world.length(); i++) {
+			if (world.toUpperCase().charAt(i) == reversWord.toUpperCase().charAt(i)) {
+				calcul++;
+			}
+		}
+
+		if (calcul == world.length()) {
+			System.out.println("Word- " + world + ": is palindrome");
 		} else {
-			world.toUpperCase();
-			String world1 = world.toUpperCase().substring(0, world.length() / 2);
-			String world2 = world.toUpperCase().substring(world.length() / 2, world.length());
-			String reverse = "";
-			for (int i = world2.length() - 1; i >= 0; i--) {
-				reverse = reverse + world2.charAt(i);
-			}
-			if (world1.equals(reverse)) {
-				System.out.println("Word: " + world + " is palindrome");
-			}
+			System.out.println("Word- " + world + ": isn't palindrome");
 		}
 	}
 }
