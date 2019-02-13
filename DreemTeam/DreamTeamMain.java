@@ -37,7 +37,9 @@ public class DreamTeamMain {
 			Task2.podil(t2);
 			break;
 		case 3:
-
+			System.out.println("Please input some cost: ");
+			Scanner t3 = new Scanner(System.in);
+			Task3.task3(t3);
 			break;
 		case 4:
 			System.out.println("Please input some string: ");
