@@ -75,7 +75,7 @@ public class DreamTeamMain {
 			task12.Kratne();
 			break;
 		case 13:
-			Task13.toDivide();
+			System.out.println(Task13.toDivide());
 			break;
 		case 14:
 
