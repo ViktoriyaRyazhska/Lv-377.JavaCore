@@ -18,7 +18,7 @@ public class DreamTeamMain {
 		}
 		
 		switch (n) {
-		case 1:	//Fibonacci
+		case 1:
 			System.out.println("Please input number: ");
 			Scanner t1 = new Scanner(System.in);
 			int num = 0;
