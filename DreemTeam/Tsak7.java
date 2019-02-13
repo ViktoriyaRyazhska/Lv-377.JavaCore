@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class factorial {
+public class Task7 {
 	public static int factorial1() throws Exception {
 		int n = 0;
 		int p = 1;
