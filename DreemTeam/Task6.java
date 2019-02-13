@@ -7,14 +7,20 @@ import java.util.regex.Pattern;
 public class Task6 {
 	
 	public static void calculateNumberOfWords(Scanner sc) {
-		System.out.println("Pleas inpud some text. Rule: 1.only one space bitwin words,2.first sumbol in text can't be space");
+		System.out.println("Pleas inpud some text. Rule: only one space bitwin words");
 		String someText = sc.nextLine();
 		int calculateWord = 0;
-		Pattern p = Pattern.compile("\\s");
+		Pattern p = Pattern.compile("\\s\\w");
+		Pattern p1 = Pattern.compile("^\\s");
+		
 		Matcher m = p.matcher(someText);
+		Matcher m1 = p1.matcher(someText);
 
 		while (m.find()) {
-			calculateWord++;
+			if (m1.find()) {
+				continue;
+			}
+			calculateWord++; 
 		}
 		System.out.println("Number of words: "+(calculateWord+1));
 	}
