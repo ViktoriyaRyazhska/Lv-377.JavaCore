@@ -15,7 +15,6 @@ public class Task11 {
 				number *= 2;
 				if (number > 9) {
 					number = (number % 10) + 1;
-					System.out.println(number + " number");
 				}
 			}
 			sum += number;
