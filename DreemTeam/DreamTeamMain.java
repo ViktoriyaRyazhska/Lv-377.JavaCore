@@ -66,7 +66,7 @@ public class DreamTeamMain {
 			Task09.task09();
 			break;
 		case 10:
-
+			Task10.task10();
 			break;
 		case 11:
 
