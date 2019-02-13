@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 
 public class Task3 {
 	
-	private  void task3(BufferedReader br) {
+	public static  void task3(BufferedReader br) {
 		 float cost = 1;
 		 float sum=0;
 		System.out.println("Input cost of dollar");
