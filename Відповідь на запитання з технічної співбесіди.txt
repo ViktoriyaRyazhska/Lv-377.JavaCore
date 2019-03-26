@@ -1,0 +1,30 @@
+public class CountElements {
+    public static void main(String[] args) {
+        char[] arr = {'t', 'e', 'o', 't'};
+
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+
+            if (!compareLastElements(arr, arr[i], i)) {
+                continue;
+            }
+
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    count++;
+                }
+            }
+            System.out.println(arr[i] + " " + count);
+            count = 0;
+        }
+    }
+
+    private static boolean compareLastElements(char[] arr, char element, int number) {
+        for (int i = 0; i < number; i++) {
+            if (arr[i] == element) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
